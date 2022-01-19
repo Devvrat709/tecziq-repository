@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideoPlayerComponent } from './video-player/video-player.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OneByOneResponseComponent } from './one-by-one-response/one-by-one-response.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    VideoPlayerComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, routingComponents, OneByOneResponseComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
