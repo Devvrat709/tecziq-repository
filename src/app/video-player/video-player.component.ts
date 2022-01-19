@@ -15,18 +15,32 @@ import videojs from 'video.js';
 })
 export class VideoPlayerComponent implements OnInit {
   @ViewChild('target', { static: true }) target: ElementRef;
-  @Input() options: {
-    fluid: boolean;
-    aspectRatio: string;
-    autoplay: boolean;
-    sources: {
-      src: string;
-      type: string;
-    }[];
-  };
+  options: any;
+  // @Input() options: {
+  //   fluid: boolean;
+  //   aspectRatio: string;
+  //   autoplay: boolean;
+  //   sources: {
+  //     src: string;
+  //     type: string;
+  //   }[];
+  // };
   player: videojs.Player;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef) {
+    this.options = {
+      aspectRatio: "16:9",
+      autoplay: false,
+      controls: true,
+      
+      sources: [
+        {
+          src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4',
+          type: 'video/mp4',
+        },
+      ],
+    };
+  }
 
   ngOnInit() {
     // instantiate Video.js

@@ -1,36 +1,19 @@
 <h1>Video Player</h1>
+<div style="height: 500px; width: 500px;">
+  <video class="video-js"  poster="https://i.pcmag.com/imagery/lineups/05OQSA4rlL7876eIsOPWHNV-1.fit_lim.size_1600x900.v1569492718.jpg" #target></video>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
-  </head>
-  <body>
-    <video
-      id="video"
-      class="video-js vjs-default-skin"
-      width="640px"
-      height="267px"
-      controls
-      preload="none"
-      poster="https://i.pcmag.com/imagery/lineups/05OQSA4rlL7876eIsOPWHNV-1.fit_lim.size_1600x900.v1569492718.jpg"
-      data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
-      crossorigin="true"
-    >
-      <source
-        src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
-        type="application/x-mpegURL"
-      />
-    </video>
-    <script src="video.js"></script>
-    <script src="videojs-http-streaming.js"></script>
-    <script>
-      var player = videojs("example-video");
-      player.play();
-    </script>
-  </body>
-</html>
+</div>
+
+<!-- <source
+    src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    type="application/x-mpegURL"
+  /> -->
+
+<!-- class="video-js vjs-default-skin"
+width="640px"
+height="267px"
+controls
+preload="none"
+poster="https://i.pcmag.com/imagery/lineups/05OQSA4rlL7876eIsOPWHNV-1.fit_lim.size_1600x900.v1569492718.jpg"
+data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+crossorigin="true" -->
